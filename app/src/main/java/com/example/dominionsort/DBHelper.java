@@ -13,9 +13,10 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String SET = "sets";
     public static final String COST = "cost";
     public static final String CARDTYPE = "type";
+    private static final int version = 1;
 
-    public DBHelper(Context context, String name, int version) {
-        super(context, name, null, version);
+    public DBHelper(Context context) {
+        super(context, TABLE_NAME, null, version);
     }
 
     @Override
